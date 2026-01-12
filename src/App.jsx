@@ -1,8 +1,19 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
+function getInitialPage() {
+  const path = window.location.pathname
+
+  if (path === '/home') return '/home.html'
+  if (path === '/shop') return '/shop.html'
+
+  // default landing
+  window.history.replaceState({}, '', '/')
+  return '/landing.html'
+}
+
 function App() {
-  const [page, setPage] = useState('/landing.html')
+  const [page, setPage] = useState(getInitialPage)
 
   useEffect(() => {
     const handleMessage = (event) => {
@@ -23,8 +34,9 @@ function App() {
 
   return (
     <iframe
+      key={page}
       src={page}
-      title="Landing"
+      title="App Frame"
       style={{
         position: 'fixed',
         inset: 0,
