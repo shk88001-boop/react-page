@@ -9,7 +9,7 @@ function getInitialPage() {
 
   // default landing
   window.history.replaceState({}, '', '/')
-  return '/landing.html'
+  return '/'
 }
 
 function App() {

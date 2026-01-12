@@ -1914,14 +1914,24 @@
         <p>&copy; 2025 FlowSync. All rights reserved. | Privacy Policy | Terms of Service</p>
     </footer>
 
-     <div id="app"></div>
+    <div id="app"></div>
     <script>
     function goHome() {
+        if (window.parent !== window) {
+        // inside iframe → SPA navigation
         window.parent.postMessage('GO_HOME', '*')
+        } else {
+        // direct open → hard redirect
+        window.location.href = '/home'
+        }
     }
 
     function goShop() {
+        if (window.parent !== window) {
         window.parent.postMessage('GO_SHOP', '*')
+        } else {
+        window.location.href = '/shop'
+        }
     }
     </script>
   
