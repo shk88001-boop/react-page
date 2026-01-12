@@ -4,21 +4,6 @@ import './App.css'
 function App() {
   const [page, setPage] = useState('/landing.html')
 
-  // Sync URL on first load
-  useEffect(() => {
-    const path = window.location.pathname
-
-    if (path === '/home') {
-      setPage('/home.html')
-    } else if (path === '/shop') {
-      setPage('/shop.html')
-    } else {
-      window.history.replaceState({}, '', '/')
-      setPage('/landing.html')
-    }
-  }, [])
-
-  // Listen iframe navigation
   useEffect(() => {
     const handleMessage = (event) => {
       if (event.data === 'GO_HOME') {
@@ -39,7 +24,7 @@ function App() {
   return (
     <iframe
       src={page}
-      title="App Frame"
+      title="Landing"
       style={{
         position: 'fixed',
         inset: 0,
