@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowSync - Project Management Reimagined</title>
+    <!-- UniversalSmart Code - DO NOT MODIFY--><script async type='text/javascript'>window.visiopt_code=window.visiopt_code||(function(){var visi_wid=501,visi_flicker_time=4000,visi_flicker_element='html',c=false,d=document,visi_fn={begin:function(){var a=d.getElementById('visi_flicker');if(!a){var a=d.createElement('style'),b=visi_flicker_element?visi_flicker_element+'{opacity:0!important;background:none!important;}':'',h=d.getElementsByTagName('head')[0];a.setAttribute('id','visi_flicker');a.setAttribute('type','text/css');if(a.styleSheet){a.styleSheet.cssText=b;}else{a.appendChild(d.createTextNode(b));}h.appendChild(a);}},complete:function(){c=true;var a=d.getElementById('visi_flicker');if(a){a.parentNode.removeChild(a);}},completed:function(){return c;},pack:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){visi_fn.complete();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){visi_fn.begin();setTimeout(function(){visi_fn.complete()},visi_flicker_time);this.pack('https://visioptdev.com/client/js_test/vt.'+visi_wid+'.js');return true;}};window.visiopt_code_status=visi_fn.init();return visi_fn;}());</script><!--End Of UniversalSmart Code -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Integrations Section */
+        .integrations {
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .integration-content {
+            max-width: 1200px;
+            margin: 60px auto 0;
+        }
+
+        .integration-hero-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 50px;
+        }
+
+        .integration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .integration-card {
+            text-align: center;
+            padding: 30px;
+            background: #f9fafb;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .integration-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .integration-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .integration-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .integration-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .integration-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #f5f5f5 100%);
+            border-radius: 12px;
+        }
+
+        .integration-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #0066cc;
+        }
+
+        .integration-text p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Case Studies Section */
+        .case-studies {
+            padding: 100px 20px;
+            background: #f9fafb;
+        }
+
+        .case-study {
+            max-width: 1200px;
+            margin: 60px auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .case-study-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 50px;
+            padding: 50px;
+        }
+
+        .case-study img {
+            width: 40%;
+            border-radius: 8px;
+            object-fit: cover;
+            height: 400px;
+        }
+
+        .case-study-text {
+            width: 60%;
+        }
+
+        .case-study-badge {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .case-study-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .case-study-company {
+            font-weight: 600;
+            color: #0066cc;
+            margin-bottom: 20px;
+        }
+
+        .case-study-text p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .case-study-quote {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f5f5f5 100%);
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 25px;
+            border-left: 4px solid #0066cc;
+        }
+
+        .case-study-quote p {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .quote-author {
+            font-weight: 600;
+            color: #0066cc;
+            font-style: normal !important;
+        }
+
+        .case-study.reverse .case-study-content {
+            flex-direction: row-reverse;
+        }
+
+        /* Benefits Deep Dive Section */
+        .benefits-deep {
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .benefits-container {
+            max-width: 1200px;
+            margin: 60px auto 0;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        .benefit-item img {
+            width: 45%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .benefit-content {
+            width: 55%;
+        }
+
+        .benefit-content h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #0066cc;
+        }
+
+        .benefit-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .benefit-item.reverse {
+            flex-direction: row-reverse;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: 100px 20px;
+            background: #f9fafb;
+        }
+
+        .problem-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .problem-card {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .problem-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .problem-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #d32f2f;
+        }
+
+        .problem-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* Solution Section */
+        .solution-section {
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .solution-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .solution-content {
+            margin-top: 60px;
+        }
+
+        .solution-item {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        .solution-item img {
+            width: 45%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .solution-text {
+            width: 55%;
+        }
+
+        .solution-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #0066cc;
+        }
+
+        .solution-text p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .solution-item.reverse {
+            flex-direction: row-reverse;
+        }
+
+        /* Use Cases Section */
+        .use-cases {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #f5f5f5 100%);
+        }
+
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1300px;
+            margin: 60px auto 0;
+        }
+
+        .use-case-card {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .use-case-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .use-case-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .use-case-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #0066cc;
+        }
+
+        .use-case-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        /* Statistics Section */
+        .stats-section {
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .stat-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80') center/cover;
+            z-index: -2;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 0 20px;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 18px 45px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: #0066cc;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0052a3;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #0066cc;
+        }
+
+        .btn-secondary:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Story Section with Images */
+        .story-section {
+            padding: 100px 0;
+        }
+
+        .full-width-image {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            margin: 80px 0;
+        }
+
+        .image-text-row {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+            gap: 60px;
+        }
+
+        .image-text-row img {
+            width: 50%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-text-row .text-content {
+            width: 50%;
+        }
+
+        .image-text-row h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #0066cc;
+        }
+
+        .image-text-row p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .image-text-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 20px;
+            background: #f9fafb;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #0066cc;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .feature-card img {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 20px;
+            object-fit: contain;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Long Content Section */
+        .long-content {
+            padding: 100px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .long-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #0066cc;
+        }
+
+        .long-content h3 {
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .long-content p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #f5f5f5 100%);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            max-width: 1200px;
+            margin: 60px auto 0;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: #0066cc;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .process-step img {
+            width: 80px;
+            height: 80px;
+            margin: 20px auto;
+            object-fit: contain;
+        }
+
+        .process-step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .process-step p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 20px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 60px auto 0;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-header img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        .testimonial-info h4 {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 3px;
+        }
+
+        .testimonial-info p {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .stars {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .stars img {
+            width: 20px;
+            height: 20px;
+            margin-right: 3px;
+        }
+
+        .testimonial-text {
+            color: #555;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 20px;
+            background: #f9fafb;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 60px auto 0;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 45px 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .pricing-card.popular {
+            border: 3px solid #0066cc;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            right: 30px;
+            background: #0066cc;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .pricing-card img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            object-fit: contain;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        .price span {
+            font-size: 1.2rem;
+            color: #888;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .pricing-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            color: #555;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        /* Team Section */
+        .team {
+            padding: 100px 20px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+            max-width: 1200px;
+            margin: 60px auto 0;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member h3 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .team-member .role {
+            color: #0066cc;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .team-member p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 100px 20px;
+            background: #f9fafb;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 60px auto 0;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-item h3 {
+            font-size: 1.3rem;
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+
+        .faq-item p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 120px 20px;
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+        }
+
+        .final-cta p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.7;
+            margin-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .image-text-row {
+                flex-direction: column;
+            }
+
+            .image-text-row img,
+            .image-text-row .text-content {
+                width: 100%;
+            }
+
+            .image-text-row.reverse {
+                flex-direction: column;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .solution-item,
+            .benefit-item {
+                flex-direction: column;
+            }
+
+            .solution-item img,
+            .solution-text,
+            .benefit-item img,
+            .benefit-content {
+                width: 100%;
+            }
+
+            .solution-item.reverse,
+            .benefit-item.reverse {
+                flex-direction: column;
+            }
+
+            .case-study-content {
+                flex-direction: column;
+                padding: 30px;
+            }
+
+            .case-study img,
+            .case-study-text {
+                width: 100%;
+            }
+
+            .case-study img {
+                height: 250px;
+            }
+
+            .case-study.reverse .case-study-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Project Management Reimagined</h1>
+            <p>Transform the way your team collaborates with FlowSync - the intelligent project management platform built for modern teams</p>
+            <div class="cta-buttons">
+                <!-- Navigation Buttons -->
+                <button onclick="goHome()" class="btn btn-primary">Start Free Trial</button>
+                <button onclick="goShop()" class="btn btn-secondary">Watch Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <h2 class="section-title">Trusted by Teams Worldwide</h2>
+            <p class="section-subtitle">Real numbers from real teams achieving extraordinary results</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=300&q=80" alt="Users">
+                    <div class="stat-number">50,000+</div>
+                    <div class="stat-label">Active Users</div>
+                    <p>Teams across 120 countries trust FlowSync</p>
+                </div>
+                <div class="stat-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&q=80" alt="Projects">
+                    <div class="stat-number">2M+</div>
+                    <div class="stat-label">Projects Completed</div>
+                    <p>Successful project deliveries and counting</p>
+                </div>
+                <div class="stat-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&q=80" alt="Time saved">
+                    <div class="stat-number">40%</div>
+                    <div class="stat-label">Time Saved</div>
+                    <p>Average productivity improvement reported</p>
+                </div>
+                <div class="stat-card">
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=300&q=80" alt="Satisfaction">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Customer Satisfaction</div>
+                    <p>Users rate us excellent or outstanding</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section with Images -->
+    <section class="story-section">
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1920&q=80" alt="Team collaboration" class="full-width-image">
+
+        <div class="image-text-row">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80" alt="Business meeting">
+            <div class="text-content">
+                <h2>Built for Modern Teams</h2>
+                <p>In today's fast-paced business environment, traditional project management tools fall short. FlowSync was designed from the ground up to address the unique challenges that modern distributed teams face every single day.</p>
+                <p>We understand that your team needs more than just task lists and timelines. You need intelligent automation, seamless communication, and real-time insights that help you make better decisions faster.</p>
+            </div>
+        </div>
+
+        <div class="image-text-row reverse">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="Remote work">
+            <div class="text-content">
+                <h2>Work From Anywhere</h2>
+                <p>The future of work is flexible. Whether your team is in the office, working remotely, or operating in a hybrid model, FlowSync keeps everyone connected and productive.</p>
+                <p>Our cloud-based platform ensures that your projects are accessible from any device, at any time, with enterprise-grade security that keeps your data safe and compliant.</p>
+            </div>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&q=80" alt="Office workspace" class="full-width-image">
+
+        <div class="image-text-row">
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80" alt="Data analytics">
+            <div class="text-content">
+                <h2>Data-Driven Insights</h2>
+                <p>Make informed decisions with powerful analytics and reporting tools. FlowSync automatically tracks project metrics, team performance, and resource allocation to give you the insights you need.</p>
+                <p>Our intelligent dashboard surfaces the most important information at just the right time, helping you spot potential issues before they become problems and capitalize on opportunities as they emerge.</p>
+            </div>
+        </div>
+
+        <div class="image-text-row reverse">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="Planning">
+            <div class="text-content">
+                <h2>Streamlined Workflows</h2>
+                <p>Say goodbye to context switching and endless email threads. FlowSync brings all your project communication, files, and tasks into one unified workspace that your entire team can access.</p>
+                <p>With customizable workflows and powerful automation features, you can eliminate repetitive tasks and focus your team's energy on the work that truly matters.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="problem-container">
+            <h2 class="section-title">Are You Struggling With These Challenges?</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <img src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=600&q=80" alt="Communication issues">
+                    <h3>Communication Breakdown</h3>
+                    <p>Your team wastes hours searching through endless email threads, Slack messages, and meeting notes trying to find critical information. Important decisions get lost in the noise, and team members are constantly asking "Where did we discuss this?" Context switching between tools kills productivity and creates confusion.</p>
+                    <p>Without a centralized source of truth, duplicate work happens frequently, conflicting information spreads, and team alignment suffers. The result? Projects stall, deadlines slip, and frustration builds.</p>
+                </div>
+                <div class="problem-card">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Missed deadlines">
+                    <h3>Constant Missed Deadlines</h3>
+                    <p>Tasks fall through the cracks because there's no clear visibility into who's working on what. Dependencies aren't tracked, bottlenecks aren't identified until it's too late, and projects consistently run over schedule. Stakeholders are left wondering why things are taking so long.</p>
+                    <p>Manual status updates consume valuable time that could be spent on actual work. By the time you realize a project is off track, it's already in crisis mode. Team members are burned out from last-minute scrambles to catch up.</p>
+                </div>
+                <div class="problem-card">
+                    <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=80" alt="Resource chaos">
+                    <h3>Resource Allocation Chaos</h3>
+                    <p>You have no clear picture of team capacity or workload distribution. Some team members are overwhelmed while others are underutilized. You can't confidently commit to new projects because you don't know if you have the resources available.</p>
+                    <p>Hiring decisions are based on gut feeling rather than data. Budget overruns happen because you're constantly bringing in contractors to handle overflow work. Team burnout increases as star performers are overloaded while their skills could be better distributed.</p>
+                </div>
+                <div class="problem-card">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" alt="Data scattered">
+                    <h3>Scattered Data & Files</h3>
+                    <p>Project files are scattered across email attachments, shared drives, Dropbox, Google Drive, and individual computers. Version control is a nightmare – nobody knows which file is the latest version. Time is wasted recreating work that was already done but can't be found.</p>
+                    <p>Onboarding new team members takes forever because institutional knowledge is locked in people's heads or buried in old documents. When key people leave, critical information leaves with them. Knowledge management is reactive rather than systematic.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="solution-container">
+            <h2 class="section-title">FlowSync Solves These Problems</h2>
+            <div class="solution-content">
+                <div class="solution-item">
+                    <img src="https://images.unsplash.com/photo-1552664688-cf412ec27db2?w=800&q=80" alt="Unified workspace">
+                    <div class="solution-text">
+                        <h3>Unified Communication Hub</h3>
+                        <p>FlowSync brings all project-related communication into one place. Every conversation, decision, and update is connected to the relevant tasks and projects. Team members can find what they need in seconds instead of hours. Context is preserved automatically, so new team members can get up to speed quickly by reviewing project history.</p>
+                        <p>Threaded discussions keep conversations organized and searchable. @mentions ensure the right people are notified. Real-time updates mean everyone stays in sync without constant status meetings. The result is clearer communication, better decisions, and faster execution.</p>
+                    </div>
+                </div>
+                <div class="solution-item reverse">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="Timeline management">
+                    <div class="solution-text">
+                        <h3>Intelligent Deadline Management</h3>
+                        <p>Our smart scheduling engine automatically identifies dependencies, critical paths, and potential bottlenecks. You get early warnings when deadlines are at risk, with actionable insights on how to get back on track. Visual timelines make it easy to see how all your projects fit together and where resource conflicts might arise.</p>
+                        <p>Automated reminders ensure nothing falls through the cracks. Progress tracking happens in real-time without requiring manual updates. Stakeholders can check project status anytime without interrupting your team. The platform learns from your past projects to provide increasingly accurate estimates and recommendations.</p>
+                    </div>
+                </div>
+                <div class="solution-item">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80" alt="Resource optimization">
+                    <div class="solution-text">
+                        <h3>Smart Resource Optimization</h3>
+                        <p>FlowSync gives you complete visibility into team capacity and workload. See at a glance who's available, who's at capacity, and who's at risk of burnout. Our AI-powered recommendations suggest optimal task assignments based on skills, availability, and workload balance.</p>
+                        <p>Capacity planning tools help you confidently commit to new work and make data-driven hiring decisions. Resource forecasting shows you future capacity needs before they become urgent. Time tracking integration reveals where time is actually being spent versus where it's budgeted, enabling continuous process improvement.</p>
+                    </div>
+                </div>
+                <div class="solution-item reverse">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80" alt="Centralized files">
+                    <div class="solution-text">
+                        <h3>Centralized Knowledge Base</h3>
+                        <p>All project files, documents, and resources live in one secure, organized location. Automatic version control means you always know which file is current. Powerful search finds what you need instantly, whether it's a file, a conversation, or a decision made months ago.</p>
+                        <p>Built-in wikis and documentation tools make it easy to capture and share knowledge. Onboarding new team members becomes smooth and efficient with clear visibility into past decisions and current processes. When team members leave, their knowledge stays behind in a well-organized, accessible format.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases">
+        <h2 class="section-title">Built for Every Industry</h2>
+        <p class="section-subtitle">Teams across diverse industries rely on FlowSync to deliver exceptional results</p>
+        <div class="use-cases-grid">
+            <div class="use-case-card">
+                <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80" alt="Software development">
+                <h3>Software Development Teams</h3>
+                <p>Manage sprints, track bugs, coordinate releases, and keep development in sync with product and design. Integrate with GitHub, GitLab, and Jira to create a seamless workflow. Track technical debt, monitor velocity, and ship better software faster.</p>
+                <p>Engineering managers gain visibility into project progress without constant interruptions. Developers spend less time in meetings and more time coding. Product teams can see exactly what's being built and when it will ship.</p>
+            </div>
+            <div class="use-case-card">
+                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80" alt="Marketing agencies">
+                <h3>Marketing & Creative Agencies</h3>
+                <p>Manage multiple client campaigns simultaneously with clear separation and organization. Track creative briefs, review cycles, and approvals in one place. Coordinate content calendars, social media schedules, and campaign launches across teams and clients.</p>
+                <p>Client communication stays organized and professional with client portals that provide visibility without overwhelming them with internal details. Time tracking and budget management ensure projects stay profitable. Resource planning prevents team burnout during busy seasons.</p>
+            </div>
+            <div class="use-case-card">
+                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=80" alt="Consulting firms">
+                <h3>Consulting Firms</h3>
+                <p>Manage client engagements from proposal through delivery and closeout. Track billable hours accurately, manage scope changes, and keep stakeholders informed. Standardize methodologies while allowing flexibility for unique client needs.</p>
+                <p>Knowledge management tools help consultants leverage past work and best practices. Collaboration features enable distributed teams to work together seamlessly. Reporting tools provide the insights clients expect while minimizing administrative burden on consultants.</p>
+            </div>
+            <div class="use-case-card">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Product teams">
+                <h3>Product Teams</h3>
+                <p>Manage product roadmaps, coordinate feature releases, and align cross-functional teams. Track user feedback, prioritize features, and measure outcomes. Keep engineering, design, marketing, and sales all working toward the same goals.</p>
+                <p>Product managers can make data-driven decisions with built-in analytics and reporting. Roadmap visualization helps communicate strategy to stakeholders. Integration with customer feedback tools ensures you're building what users actually need.</p>
+            </div>
+            <div class="use-case-card">
+                <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&q=80" alt="Operations teams">
+                <h3>Operations & PMO</h3>
+                <p>Standardize project management practices across the organization. Portfolio management gives leadership visibility into all initiatives. Resource management ensures optimal allocation across projects. Risk management tools identify and track potential issues.</p>
+                <p>PMO teams can enforce governance without creating bureaucracy. Automated workflows ensure consistent processes. Reporting and dashboards provide leadership with the insights they need without manual data compilation.</p>
+            </div>
+            <div class="use-case-card">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Remote teams">
+                <h3>Remote & Distributed Teams</h3>
+                <p>Keep globally distributed teams coordinated across time zones. Asynchronous communication features ensure progress continues 24/7. Video integration, screen sharing, and collaborative editing enable real-time collaboration when needed.</p>
+                <p>Time zone support automatically adjusts deadlines and meeting times for each team member. Mobile apps ensure team members can stay productive from anywhere. Cultural and language features support truly global teams.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2 class="section-title">Powerful Features for Every Team</h2>
+        <p class="section-subtitle">Everything you need to plan, execute, and deliver successful projects</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=200&q=80" alt="Task management">
+                <h3>Smart Task Management</h3>
+                <p>Create, assign, and track tasks with intelligent prioritization. Our AI-powered suggestions help you organize work more effectively and ensure nothing falls through the cracks.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&q=80" alt="Real-time collaboration">
+                <h3>Real-Time Collaboration</h3>
+                <p>Work together seamlessly with live updates, instant messaging, and collaborative editing. See what your team is working on in real-time and jump in to help when needed.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&q=80" alt="Advanced analytics">
+                <h3>Advanced Analytics</h3>
+                <p>Gain deep insights into project performance with customizable dashboards and detailed reports. Track KPIs, identify bottlenecks, and optimize your team's workflow with data-driven decisions.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=200&q=80" alt="Time tracking">
+                <h3>Integrated Time Tracking</h3>
+                <p>Track time spent on tasks and projects effortlessly. Generate accurate timesheets, bill clients with confidence, and understand where your team's time is actually going.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=200&q=80" alt="File management">
+                <h3>Centralized File Management</h3>
+                <p>Store, organize, and share files with your team in one secure location. Version control ensures you always have access to the latest documents and can track changes over time.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=200&q=80" alt="Automation">
+                <h3>Workflow Automation</h3>
+                <p>Automate repetitive tasks and create custom workflows that match your team's unique processes. Save hours every week by letting FlowSync handle the busy work for you.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=200&q=80" alt="Resource planning">
+                <h3>Resource Planning</h3>
+                <p>Allocate resources effectively across multiple projects. Prevent team burnout, balance workloads, and ensure every project has the resources it needs to succeed.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=200&q=80" alt="Mobile access">
+                <h3>Mobile Access</h3>
+                <p>Stay productive on the go with our fully-featured mobile apps for iOS and Android. Access your projects, communicate with your team, and update tasks from anywhere.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section class="integrations">
+        <h2 class="section-title">Seamless Integrations</h2>
+        <p class="section-subtitle">Connect FlowSync with the tools you already love and use</p>
+        <div class="integration-content">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80" alt="Integrations dashboard" class="integration-hero-img">
+            <div class="integration-grid">
+                <div class="integration-card">
+                    <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=200&q=80" alt="Slack">
+                    <h4>Communication Tools</h4>
+                    <p>Slack, Microsoft Teams, Discord - Get notifications and updates where your team already communicates</p>
+                </div>
+                <div class="integration-card">
+                    <img src="https://images.unsplash.com/photo-1484807352052-23338990c6c6?w=200&q=80" alt="Cloud storage">
+                    <h4>Cloud Storage</h4>
+                    <p>Google Drive, Dropbox, OneDrive - Access and attach files from your preferred storage provider</p>
+                </div>
+                <div class="integration-card">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=200&q=80" alt="Development tools">
+                    <h4>Development Tools</h4>
+                    <p>GitHub, GitLab, Bitbucket, Jira - Link commits, PRs, and issues directly to tasks</p>
+                </div>
+                <div class="integration-card">
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=200&q=80" alt="Calendar">
+                    <h4>Calendar & Email</h4>
+                    <p>Google Calendar, Outlook, Gmail - Sync deadlines and get email notifications</p>
+                </div>
+                <div class="integration-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&q=80" alt="Analytics">
+                    <h4>Analytics & BI</h4>
+                    <p>Tableau, Power BI, Google Analytics - Export data for advanced analysis and reporting</p>
+                </div>
+                <div class="integration-card">
+                    <img src="https://images.unsplash.com/photo-1556742111-a301076d9d18?w=200&q=80" alt="CRM">
+                    <h4>CRM & Sales</h4>
+                    <p>Salesforce, HubSpot, Pipedrive - Connect customer data with project execution</p>
+                </div>
+            </div>
+            <div class="integration-text">
+                <h3>Open API for Custom Integrations</h3>
+                <p>Our comprehensive REST API and webhooks enable you to build custom integrations tailored to your specific needs. Extensive documentation, client libraries in multiple languages, and dedicated developer support make integration straightforward. Join our developer community to share integrations and learn from others.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="case-studies">
+        <h2 class="section-title">Success Stories</h2>
+        <p class="section-subtitle">See how leading teams transformed their operations with FlowSync</p>
+        
+        <div class="case-study">
+            <div class="case-study-content">
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80" alt="TechCorp case study">
+                <div class="case-study-text">
+                    <div class="case-study-badge">CASE STUDY</div>
+                    <h3>How TechCorp Reduced Project Delivery Time by 45%</h3>
+                    <p class="case-study-company">TechCorp Inc. - Enterprise Software Company, 250 employees</p>
+                    <p><strong>The Challenge:</strong> TechCorp was struggling with delayed product releases, poor cross-team coordination, and frustrated stakeholders. Engineering, product, and design teams were using different tools, making collaboration difficult. Status meetings consumed 15+ hours per week for managers, yet leadership still lacked clear visibility into project status.</p>
+                    <p><strong>The Solution:</strong> After implementing FlowSync, TechCorp consolidated all project management into a single platform. They standardized workflows across teams, automated status reporting, and created custom dashboards for different stakeholders. The integration with their existing development tools created seamless workflows.</p>
+                    <p><strong>The Results:</strong> Within three months, project delivery time decreased by 45%. Status meeting time was cut by 70%, freeing managers to focus on strategy and coaching. Team satisfaction scores increased by 35%, and stakeholder complaints about visibility dropped to near zero. The company successfully launched 3 major features ahead of schedule in Q4.</p>
+                    <div class="case-study-quote">
+                        <p>"FlowSync transformed how we work. We're shipping faster, with better quality, and our team is happier. It's rare to find a tool that delivers on its promises - FlowSync exceeded our expectations."</p>
+                        <p class="quote-author">- Sarah Johnson, VP of Engineering, TechCorp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-study reverse">
+            <div class="case-study-content">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80" alt="Creative agency case study">
+                <div class="case-study-text">
+                    <div class="case-study-badge">CASE STUDY</div>
+                    <h3>BrandStudio Scales to 3x More Clients Without Adding Headcount</h3>
+                    <p class="case-study-company">BrandStudio - Digital Marketing Agency, 45 employees</p>
+                    <p><strong>The Challenge:</strong> This fast-growing agency was turning away new clients because they couldn't handle more work with their current team. Project profitability was inconsistent, with some campaigns going significantly over budget. Client communication was chaotic, with important requests getting lost in email.</p>
+                    <p><strong>The Solution:</strong> BrandStudio implemented FlowSync to streamline their operations. They created templates for common project types, implemented time tracking for better budget management, and set up client portals for transparent communication. Automation handled routine tasks like status updates and approval requests.</p>
+                    <p><strong>The Results:</strong> The agency successfully increased their client roster from 12 to 35 without hiring additional project managers. Project profitability improved by 28% through better time tracking and resource allocation. Client satisfaction scores increased to 4.8/5.0, and the agency won two industry awards for campaign excellence.</p>
+                    <div class="case-study-quote">
+                        <p>"We thought we'd need to hire 3-4 more project managers to grow. FlowSync made our existing team so much more efficient that we've tripled our business without proportionally increasing headcount. The ROI is incredible."</p>
+                        <p class="quote-author">- Michael Chen, Founder & CEO, BrandStudio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-study">
+            <div class="case-study-content">
+                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80" alt="Non-profit case study">
+                <div class="case-study-text">
+                    <div class="case-study-badge">CASE STUDY</div>
+                    <h3>GlobalAid Coordinates Relief Efforts Across 30 Countries</h3>
+                    <p class="case-study-company">GlobalAid Foundation - International Non-Profit, 200+ staff and volunteers</p>
+                    <p><strong>The Challenge:</strong> Coordinating humanitarian projects across multiple countries and time zones was incredibly complex. Language barriers, limited internet connectivity in some regions, and volunteer turnover made project continuity difficult. Reporting to donors required compiling data from dozens of disconnected sources.</p>
+                    <p><strong>The Solution:</strong> GlobalAid chose FlowSync for its mobile-first design, offline capabilities, and multilingual support. They created standardized project templates that could be adapted for local contexts while maintaining consistency for reporting. Integration with their financial systems automated donor reporting.</p>
+                    <p><strong>The Results:</strong> GlobalAid successfully coordinated relief efforts during two major humanitarian crises, deploying resources 60% faster than previous responses. Volunteer onboarding time decreased from 2 weeks to 3 days. Donor reporting time was cut by 80%, and the organization secured $2M in additional funding due to improved transparency and demonstrated impact.</p>
+                    <div class="case-study-quote">
+                        <p>"In humanitarian work, speed saves lives. FlowSync helps us coordinate complex operations across dozens of countries, respond faster to emergencies, and demonstrate our impact to donors. It's become essential to our mission."</p>
+                        <p class="quote-author">- Dr. Aisha Patel, Director of Operations, GlobalAid Foundation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Deep Dive -->
+    <section class="benefits-deep">
+        <h2 class="section-title">Why Teams Love FlowSync</h2>
+        <div class="benefits-container">
+            <div class="benefit-item">
+                <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=600&q=80" alt="Time savings">
+                <div class="benefit-content">
+                    <h3>Reclaim 10+ Hours Per Week</h3>
+                    <p>Stop wasting time on status updates, searching for information, and coordinating across tools. FlowSync automates the busy work so your team can focus on meaningful work. Our customers report saving an average of 10-15 hours per week per team member.</p>
+                    <p>That time adds up fast. For a team of 10, that's 100-150 hours per week - equivalent to 2-3 full-time employees. Imagine what your team could accomplish with that extra capacity.</p>
+                </div>
+            </div>
+            <div class="benefit-item reverse">
+                <img src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?w=600&q=80" alt="Better decisions">
+                <div class="benefit-content">
+                    <h3>Make Better Decisions Faster</h3>
+                    <p>Access real-time data and insights whenever you need them. No more waiting for reports to be compiled or making decisions based on outdated information. FlowSync's intelligent analytics surface the insights you need, when you need them.</p>
+                    <p>Understand project health at a glance, identify risks before they become crises, and make resource allocation decisions backed by data. Leadership teams report making strategic decisions 3x faster with better confidence.</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Team happiness">
+                <div class="benefit-content">
+                    <h3>Boost Team Morale and Retention</h3>
+                    <p>Happy teams are productive teams. FlowSync reduces the friction and frustration that comes with poor tools and unclear processes. Team members spend less time on administrative tasks and more time doing work they find meaningful.</p>
+                    <p>Clear visibility into priorities and progress reduces anxiety and conflict. Recognition features ensure good work gets noticed. Our customers report 35% higher team satisfaction scores and 28% improvement in retention rates.</p>
+                </div>
+            </div>
+            <div class="benefit-item reverse">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="ROI">
+                <div class="benefit-content">
+                    <h3>Proven ROI in Weeks, Not Months</h3>
+                    <p>Most software takes months to show value. FlowSync delivers measurable improvements within the first billing cycle. Faster project completion, reduced overtime, fewer missed deadlines, and improved resource utilization add up to significant cost savings.</p>
+                    <p>Our customers typically see 3-5x ROI within the first year. When you factor in the cost of delays, the value of improved team morale, and the opportunity to take on more work without adding headcount, the business case becomes compelling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Long Content Section -->
+    <section class="long-content">
+        <h2>Why Teams Choose FlowSync</h2>
+        <p>In an increasingly complex business landscape, the ability to manage projects effectively has become a critical competitive advantage. Organizations that can plan, execute, and adapt quickly are the ones that thrive. Yet too many teams are held back by outdated tools and inefficient processes that waste time and create frustration.</p>
+
+        <p>FlowSync was born from a simple observation: project management shouldn't be complicated. Your tools should work for you, not against you. They should make collaboration easier, not harder. They should provide clarity, not confusion. Most importantly, they should help your team focus on doing great work instead of managing the tools themselves.</p>
+
+        <p>We spent years studying how high-performing teams operate. We interviewed hundreds of project managers, team leaders, and individual contributors across dozens of industries. We learned what works, what doesn't, and what truly matters when it comes to project success. The result is a platform that combines powerful functionality with an intuitive interface that teams actually enjoy using.</p>
+
+        <h3>The Cost of Inefficiency</h3>
+        <p>Consider the hidden costs in your current workflow. How much time does your team spend searching for information scattered across email, chat, and multiple tools? How many hours are lost to status meetings that could be replaced by clear, real-time visibility? How often do projects go off track because important details were missed or miscommunicated?</p>
+
+        <p>Research shows that knowledge workers spend an average of 2.5 hours per day searching for information. That's over 30% of the workday wasted on finding what they need to do their jobs. In a team of 10 people, that's the equivalent of three full-time employees doing nothing but looking for files and answers. The financial impact is staggering, but the human cost – in terms of frustration, stress, and missed opportunities – is even greater.</p>
+
+        <h3>A Better Way Forward</h3>
+        <p>FlowSync eliminates these inefficiencies by centralizing everything your team needs in one intelligent workspace. Every conversation, every file, every task, and every decision is connected and contextual. No more switching between tabs, no more wondering where that important document went, no more confusion about who's responsible for what.</p>
+
+        <p>But we didn't stop at organization. We built intelligence into every aspect of the platform. FlowSync learns from your team's patterns and proactively surfaces relevant information, suggests optimal task assignments based on workload and expertise, and alerts you to potential issues before they impact your timeline.</p>
+
+        <h3>Built for Scale</h3>
+        <p>Whether you're a startup with five people or an enterprise with thousands, FlowSync scales with your needs. Our architecture is designed to handle projects of any size and complexity, from simple task lists to multi-year initiatives with hundreds of interconnected workstreams.</p>
+
+        <p>As your organization grows, FlowSync grows with you. Add new teams, departments, and workflows without missing a beat. Our enterprise features include advanced permissions, single sign-on, audit logs, and dedicated support to ensure your success at every stage of growth.</p>
+
+        <h3>Security You Can Trust</h3>
+        <p>We understand that your project data is sensitive and valuable. That's why security is built into every layer of FlowSync. We use bank-level encryption for data in transit and at rest, maintain SOC 2 Type II compliance, and undergo regular third-party security audits. Your data is hosted in world-class data centers with redundancy and disaster recovery protocols that ensure 99.9% uptime.</p>
+
+        <p>But security isn't just about technology – it's about transparency and control. You have complete visibility into who accesses what, when they access it, and what actions they take. You can configure granular permissions, set up approval workflows, and ensure that sensitive information is only available to those who need it.</p>
+
+        <h3>Integrations That Work</h3>
+        <p>FlowSync doesn't exist in isolation. We integrate seamlessly with the tools your team already uses and loves. Connect with your calendar to automatically sync deadlines, integrate with your communication platform to centralize conversations, link to your file storage to access documents without leaving FlowSync, and connect with your development tools to track technical work alongside business projects.</p>
+
+        <p>Our open API means you can build custom integrations tailored to your specific workflows. Automate data synchronization, create custom reports, and extend FlowSync's functionality to meet your unique requirements.</p>
+
+        <h3>Customer Success Stories</h3>
+        <p>Thousands of teams across the globe trust FlowSync to manage their most important projects. Marketing agencies use it to coordinate campaigns across multiple clients. Software companies rely on it to ship products on time. Consulting firms depend on it to deliver client projects flawlessly. Non-profits leverage it to maximize impact with limited resources.</p>
+
+        <p>What they all have in common is a commitment to excellence and a recognition that the right tools make all the difference. FlowSync customers report 40% faster project completion times, 60% reduction in missed deadlines, and 85% improvement in team satisfaction. But the numbers only tell part of the story – the real impact is in the stress reduced, the clarity gained, and the success achieved.</p>
+
+        <h3>Your Success Is Our Mission</h3>
+        <p>When you choose FlowSync, you're not just getting software – you're gaining a partner committed to your success. Our customer success team works with you from day one to ensure smooth onboarding, optimal configuration, and ongoing optimization. We provide extensive training resources, regular webinars, and a responsive support team that's genuinely invested in helping you achieve your goals.</p>
+
+        <p>We believe that great software should continuously improve, which is why we ship new features and enhancements every week based on customer feedback. Your voice shapes the future of FlowSync, and we're constantly evolving to meet your changing needs.</p>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <h2 class="section-title">How FlowSync Works</h2>
+        <p class="section-subtitle">Get up and running in minutes with our simple four-step process</p>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=200&q=80" alt="Sign up">
+                <h3>Sign Up Free</h3>
+                <p>Create your account in seconds. No credit card required, no commitment. Start with our generous free tier and explore all features.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=200&q=80" alt="Invite team">
+                <h3>Invite Your Team</h3>
+                <p>Add team members with a simple email invitation. They'll be up and running in minutes with our intuitive onboarding.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=200&q=80" alt="Create projects">
+                <h3>Create Projects</h3>
+                <p>Set up your first project using our templates or start from scratch. Add tasks, assign owners, and set deadlines effortlessly.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=200&q=80" alt="Track progress">
+                <h3>Track & Deliver</h3>
+                <p>Monitor progress in real-time with our intuitive dashboards. Collaborate, adapt, and deliver projects successfully.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2 class="section-title">Loved by Teams Worldwide</h2>
+        <p class="section-subtitle">Don't just take our word for it – hear from teams who've transformed their workflow with FlowSync</p>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="Sarah Johnson">
+                    <div class="testimonial-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>Product Manager at TechCorp</p>
+                    </div>
+                </div>
+                <div class="stars">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                </div>
+                <p class="testimonial-text">"FlowSync has completely transformed how our team operates. We've cut our project delivery time by 40% and everyone actually enjoys using it. The real-time collaboration features are game-changing."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Michael Chen">
+                    <div class="testimonial-info">
+                        <h4>Michael Chen</h4>
+                        <p>CEO at StartupX</p>
+                    </div>
+                </div>
+                <div class="stars">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                </div>
+                <p class="testimonial-text">"As a fast-growing startup, we needed a tool that could scale with us. FlowSync has been that tool and more. The automation features alone have saved us countless hours every week."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80" alt="Emily Rodriguez">
+                    <div class="testimonial-info">
+                        <h4>Emily Rodriguez</h4>
+                        <p>Marketing Director at BrandCo</p>
+                    </div>
+                </div>
+                <div class="stars">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                </div>
+                <p class="testimonial-text">"Managing multiple campaigns across different clients used to be a nightmare. FlowSync made it simple. The dashboard gives me instant visibility into everything that's happening."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" alt="David Kim">
+                    <div class="testimonial-info">
+                        <h4>David Kim</h4>
+                        <p>Engineering Lead at DevHub</p>
+                    </div>
+                </div>
+                <div class="stars">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                </div>
+                <p class="testimonial-text">"The integrations with our dev tools are seamless. We can track sprint progress, link commits to tasks, and keep everyone aligned without switching contexts. It's exactly what we needed."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80" alt="Lisa Thompson">
+                    <div class="testimonial-info">
+                        <h4>Lisa Thompson</h4>
+                        <p>Operations Manager at GlobalCo</p>
+                    </div>
+                </div>
+                <div class="stars">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                </div>
+                <p class="testimonial-text">"We manage operations across 12 countries and FlowSync keeps everyone connected and aligned. The time zone support and mobile app are lifesavers for our distributed team."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80" alt="James Wilson">
+                    <div class="testimonial-info">
+                        <h4>James Wilson</h4>
+                        <p>Creative Director at DesignStudio</p>
+                    </div>
+                </div>
+                <div class="stars">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                </div>
+                <p class="testimonial-text">"The file management and version control features are perfect for our design work. We can collaborate on projects without the usual chaos of file versions and feedback scattered everywhere."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&q=80" alt="Amanda Foster">
+                    <div class="testimonial-info">
+                        <h4>Amanda Foster</h4>
+                        <p>Project Manager at BuildCo</p>
+                    </div>
+                </div>
+                <div class="stars">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                </div>
+                <p class="testimonial-text">"FlowSync helped us coordinate a complex construction project with 15 subcontractors. The visibility and communication features kept everyone on the same page, and we finished ahead of schedule."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=200&q=80" alt="Ryan Martinez">
+                    <div class="testimonial-info">
+                        <h4>Ryan Martinez</h4>
+                        <p>Consultant at StrategyFirst</p>
+                    </div>
+                </div>
+                <div class="stars">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                </div>
+                <p class="testimonial-text">"As a consultant working with multiple clients, FlowSync keeps all my projects organized. The time tracking is accurate, billing is easy, and clients love the transparency they get through the portal."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80" alt="Nicole Chang">
+                    <div class="testimonial-info">
+                        <h4>Nicole Chang</h4>
+                        <p>CMO at GrowthLabs</p>
+                    </div>
+                </div>
+                <div class="stars">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                </div>
+                <p class="testimonial-text">"Our marketing team runs dozens of campaigns simultaneously. FlowSync's template system and automation keep us moving fast without sacrificing quality. Our campaign success rate has improved by 25%."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&q=80" alt="Thomas Anderson">
+                    <div class="testimonial-info">
+                        <h4>Thomas Anderson</h4>
+                        <p>CTO at CloudScale</p>
+                    </div>
+                </div>
+                <div class="stars">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                </div>
+                <p class="testimonial-text">"We evaluated 8 different project management tools before choosing FlowSync. The combination of power and ease of use is unmatched. Our developers actually like using it, which says everything."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&q=80" alt="Jessica Lee">
+                    <div class="testimonial-info">
+                        <h4>Jessica Lee</h4>
+                        <p>Founder at ImpactHub</p>
+                    </div>
+                </div>
+                <div class="stars">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                </div>
+                <p class="testimonial-text">"As a non-profit, we need to maximize every dollar. FlowSync's non-profit discount made it affordable, and the efficiency gains have allowed us to serve 40% more beneficiaries with the same budget."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=200&q=80" alt="Kevin O'Brien">
+                    <div class="testimonial-info">
+                        <h4>Kevin O'Brien</h4>
+                        <p>VP Sales at SalesForce Pro</p>
+                    </div>
+                </div>
+                <div class="stars">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=50&q=80" alt="star">
+                </div>
+                <p class="testimonial-text">"FlowSync's CRM integration means our sales and delivery teams are always aligned. Deals close faster because prospects can see exactly how we'll execute, and we never overpromise."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing">
+        <h2 class="section-title">Simple, Transparent Pricing</h2>
+        <p class="section-subtitle">Choose the plan that fits your team's needs. All plans include our core features.</p>
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=200&q=80" alt="Starter plan">
+                <h3>Starter</h3>
+                <div class="price">$12<span>/user/month</span></div>
+                <ul class="pricing-features">
+                    <li>Up to 10 team members</li>
+                    <li>Unlimited projects</li>
+                    <li>Basic task management</li>
+                    <li>5GB file storage</li>
+                    <li>Real-time collaboration</li>
+                    <li>Mobile apps</li>
+                    <li>Email support</li>
+                    <li>Standard integrations</li>
+                </ul>
+                <a href="#" class="btn btn-secondary">Get Started</a>
+            </div>
+
+            <div class="pricing-card popular">
+                <span class="popular-badge">Most Popular</span>
+                <img src="https://images.unsplash.com/photo-1620428268482-cf1851a36764?w=200&q=80" alt="Professional plan">
+                <h3>Professional</h3>
+                <div class="price">$24<span>/user/month</span></div>
+                <ul class="pricing-features">
+                    <li>Up to 50 team members</li>
+                    <li>Unlimited projects</li>
+                    <li>Advanced task management</li>
+                    <li>100GB file storage</li>
+                    <li>Real-time collaboration</li>
+                    <li>Mobile apps</li>
+                    <li>Priority support</li>
+                    <li>All integrations</li>
+                    <li>Custom workflows</li>
+                    <li>Advanced analytics</li>
+                    <li>Time tracking</li>
+                    <li>Resource planning</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+
+            <div class="pricing-card">
+                <img src="https://images.unsplash.com/photo-1553531087-42dcf55d1b8f?w=200&q=80" alt="Enterprise plan">
+                <h3>Enterprise</h3>
+                <div class="price">Custom</div>
+                <ul class="pricing-features">
+                    <li>Unlimited team members</li>
+                    <li>Unlimited projects</li>
+                    <li>Advanced task management</li>
+                    <li>Unlimited file storage</li>
+                    <li>Real-time collaboration</li>
+                    <li>Mobile apps</li>
+                    <li>Dedicated support</li>
+                    <li>All integrations</li>
+                    <li>Custom workflows</li>
+                    <li>Advanced analytics</li>
+                    <li>Time tracking</li>
+                    <li>Resource planning</li>
+                    <li>SSO & advanced security</li>
+                    <li>Custom onboarding</li>
+                    <li>SLA guarantee</li>
+                </ul>
+                <a href="#" class="btn btn-secondary">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <h2 class="section-title">Meet the Team Behind FlowSync</h2>
+        <p class="section-subtitle">A passionate group of builders, designers, and problem-solvers committed to your success</p>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" alt="Alex Morgan">
+                <h3>Alex Morgan</h3>
+                <p class="role">Founder & CEO</p>
+                <p>Former VP of Product at a Fortune 500 company, Alex founded FlowSync to democratize enterprise-grade project management for teams of all sizes.</p>
+            </div>
+
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Rachel Park">
+                <h3>Rachel Park</h3>
+                <p class="role">Chief Technology Officer</p>
+                <p>With 15 years in software architecture, Rachel leads our engineering team and ensures FlowSync remains cutting-edge, scalable, and secure.</p>
+            </div>
+
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80" alt="Marcus Johnson">
+                <h3>Marcus Johnson</h3>
+                <p class="role">Head of Product</p>
+                <p>Marcus brings a decade of product management experience, focusing on creating intuitive experiences that users love and business results that matter.</p>
+            </div>
+
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=80" alt="Sophie Chen">
+                <h3>Sophie Chen</h3>
+                <p class="role">Lead Designer</p>
+                <p>Sophie crafts every pixel of FlowSync's interface, ensuring that powerful functionality meets beautiful, intuitive design.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about FlowSync</p>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3>How long does it take to get started with FlowSync?</h3>
+                <p>You can create an account and start managing projects in less than 5 minutes. Our intuitive onboarding process guides you through the basics, and our templates help you set up your first project quickly. Most teams are fully productive within their first week, and our customer success team is available to help you get the most out of FlowSync from day one.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I migrate my data from other project management tools?</h3>
+                <p>Absolutely! We provide migration tools and support for all major project management platforms. Our team can help you import your existing projects, tasks, and files with minimal disruption to your workflow. Most migrations are completed within 24-48 hours, and we'll work with you to ensure a smooth transition.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is my data secure with FlowSync?</h3>
+                <p>Security is our top priority. We use bank-level AES-256 encryption for data at rest and TLS 1.3 for data in transit. We're SOC 2 Type II compliant, undergo regular security audits, and maintain 99.9% uptime. Your data is backed up continuously and stored in redundant data centers. We never share your data with third parties, and you maintain complete ownership and control.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What kind of support do you offer?</h3>
+                <p>All customers receive email support with responses within 24 hours. Professional plan customers get priority support with faster response times. Enterprise customers receive dedicated account management, custom onboarding, and 24/7 phone support. We also offer extensive self-service resources including documentation, video tutorials, and a community forum.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can FlowSync integrate with the tools we already use?</h3>
+                <p>Yes! FlowSync integrates with over 100 popular business tools including Slack, Microsoft Teams, Google Workspace, Salesforce, Jira, GitHub, and many more. Our Professional and Enterprise plans include access to all integrations, and our open API allows you to build custom integrations for your specific needs.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What happens if I need to cancel my subscription?</h3>
+                <p>You can cancel your subscription at any time with no penalties or fees. You'll continue to have access to FlowSync until the end of your billing period. Before your access expires, you can export all your data in standard formats. We also offer a 30-day grace period during which you can reactivate your account if you change your mind.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you offer discounts for non-profits or educational institutions?</h3>
+                <p>Yes! We offer special pricing for registered non-profit organizations and educational institutions. Non-profits receive 50% off all plans, and educational institutions receive 40% off. Contact our sales team with proof of your organization's status to learn more about our discount programs.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I try FlowSync before committing to a paid plan?</h3>
+                <p>Definitely! We offer a 14-day free trial with full access to all Professional plan features. No credit card is required to start your trial, and you can upgrade, downgrade, or cancel at any time. We want you to be completely confident that FlowSync is the right solution for your team before you invest.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How does FlowSync handle team member changes?</h3>
+                <p>Adding or removing team members is simple and instant. You're only charged for active users, and our billing is prorated automatically. If you add team members mid-month, you'll only pay for the remaining days in that billing cycle. If you remove team members, you'll receive a credit applied to your next invoice.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What makes FlowSync different from other project management tools?</h3>
+                <p>FlowSync combines the power of enterprise-grade project management with the simplicity that teams actually enjoy using. Our intelligent automation reduces busywork, our real-time collaboration features keep everyone aligned, and our analytics provide actionable insights. But what really sets us apart is our commitment to customer success – we're not just selling software, we're partnering with you to help your team achieve its goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <h2>Ready to Transform Your Team's Productivity?</h2>
+        <p>Join thousands of teams who have already made the switch to smarter project management</p>
+        <a href="#" class="btn btn-secondary">Start Your Free Trial Today</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>FlowSync</h3>
+        <p>&copy; 2025 FlowSync. All rights reserved. | Privacy Policy | Terms of Service</p>
+    </footer>
+
+     <div id="app"></div>
+    <script>
+    function goHome() {
+        window.parent.postMessage('GO_HOME', '*')
+    }
+
+    function goShop() {
+        window.parent.postMessage('GO_SHOP', '*')
+    }
+    </script>
+  
+</body>
+</html>
