@@ -11,6 +11,7 @@ function getInitialPage() {
   return '/landing.html'
 }
 
+
 function App() {
   const [page, setPage] = useState(getInitialPage)
 

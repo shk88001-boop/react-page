@@ -184,7 +184,7 @@
                         <div class="collapse navbar-collapse" id="navbarCollapse">
                             <div class="navbar-nav ms-auto py-0">
                                 <a href="#" class="nav-item nav-link active">Home</a>
-                                <a href="#" class="nav-item nav-link">Shop</a>
+                                <a href="javascript:void(0)" class="nav-item nav-link" onclick="goShop()">Shop</a>
                                 <a href="#" class="nav-item nav-link">Shop Cart</a>
                                 <a href="#" class="nav-item nav-link">Cheackout</a>
                                 <a href="#" class="nav-item nav-link me-2">Contact</a>
@@ -1907,7 +1907,17 @@
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
-        
+        <script>
+            function goShop() {
+                // Tell the parent frame to switch to /shop
+                if (window.parent !== window) {
+                window.parent.postMessage('GO_SHOP', '*');
+                } else {
+                window.location.href = '/shop';
+                }
+            }
+            </script>
+
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
