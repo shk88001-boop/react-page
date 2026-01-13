@@ -8,7 +8,7 @@ function getInitialPage() {
   if (path === '/shop') return '/shop.html'
 
   window.history.replaceState({}, '', '/')
-  return '/'   
+  return '/landing.html'   
 }
 
 
