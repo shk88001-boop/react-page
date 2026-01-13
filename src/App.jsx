@@ -8,7 +8,8 @@ function getInitialPage() {
   if (path === '/shop') return '/shop.html'
 
   // default landing
-  return '/landing.html'
+  window.history.replaceState({}, '', '/')
+  return '/'
 }
 
 
