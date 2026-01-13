@@ -7,14 +7,13 @@ function getInitialPage() {
   if (path === '/home') return '/home.html'
   if (path === '/shop') return '/shop.html'
 
-  // default landing
   window.history.replaceState({}, '', '/')
-  return '/'
+  return '/'   
 }
 
 
 function App() {
-  const [page, setPage] = useState(getInitialPage)
+const [page, setPage] = useState(getInitialPage)
 
   useEffect(() => {
     const handleMessage = (event) => {
